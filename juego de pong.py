@@ -70,7 +70,17 @@ while not gameOver:
         pelotaCordenadaY = 300
         pelotaXVelocidad *= -1
         pelotaYVelocidad *= -1
-                   
+    #limita el recorrido de los jugadores para que no salgan de la pantalla
+    #jugador 1
+    if jugador1CordenadaY > 510 : 
+        jugador1CordenadaY = 510
+    if jugador1CordenadaY < 0:
+        jugador1CordenadaY = 0
+    #jugador 2
+    if jugador2CordenadaY > 510 : 
+        jugador2CordenadaY = 510
+    if jugador2CordenadaY < 0:
+        jugador2CordenadaY = 0
      
     #modifica las cordenadas de los jugadores y la pelota
     jugador1CordenadaY += velocidadJugador1
